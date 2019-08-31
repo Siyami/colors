@@ -1,4 +1,40 @@
+<!-- Top Nav -->
+<nav id="navbar" class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+  <img src="../assets/img/logo-symbol.svg" id="logo">
+  <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+          <input type="text">
+      </li>
+  </ul>
+</nav>
 
-
-
-
+<div class="container-fluid">
+  <div class="row">
+      <!-- Side Nav -->
+      <nav id="sidenav" class="col-md-2 d-none d-md-block sidebar" style="height: calc(100vh - 60px); overflow-y: auto;">
+          <div class="sidebar-sticky" id="sideview">
+              <button>Random Color</button>
+              <ul class="nav flex-column">
+                  <li>Red</li>
+                  <li>Orange</li>
+                  <li>Yellow</li>
+                  <li>Green</li>
+                  <li>Blue</li>
+                  <li>Purple</li>
+                  <li>Brown</li>
+                  <li>Gray</li>
+              </ul>
+          </div>
+      </nav>
+      <main *ngIf="colorsData" id="main" role="main" class="ml-sm-auto col-md-10 pt-3 px-4" style="padding-left: 0px; height: calc(100vh - 60px); overflow-y: auto;">
+          <div *ngFor="let color of colorsData.colors" [style.backgroundColor]="'#' + color.hex" class="card">
+              <!-- <img src="img_avatar2.png" alt="Avatar" style="width:100%"> -->
+              <div class="container">
+                  <h4><b>Jane Doe</b></h4>
+                  <p>Interior Designer</p>
+              </div>
+          </div>
+          <!-- <router-outlet></router-outlet> -->
+      </main>
+  </div>
+</div>
