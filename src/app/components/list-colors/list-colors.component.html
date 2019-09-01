@@ -1,6 +1,5 @@
-<div class="row">
+<div class="row" id="display">
   <div *ngFor="let color of displayArr" class="card">
-      <!-- <img src="img_avatar2.png" alt="Avatar" style="width:100%"> -->
       <div [style.backgroundColor]="'#' + color.hex" class="color"></div>
       <div class="container">
           <p class="color-name">{{'#' + color.hex}}</p>
@@ -8,7 +7,9 @@
   </div>
 </div>
 <div class="row">
-  <ol id="page-nums">
-      <li *ngFor="let number of pageArr" id="pagination" (click)="changePage(number)">{{number}}</li>
-  </ol>
+  <div class="col"></div>
+    <div class="col" id="page-nums">
+        <p style="display: inline; margin-right: 10px; font-size: 20px; cursor: pointer;" *ngFor="let number of pageArr" (click)="changePage(number); underline(number, pageArr);" [id]="'p' + number">{{number}}</p>
+    </div>
+  <div class="col"></div>
 </div>

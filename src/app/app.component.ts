@@ -10,14 +10,19 @@ import { HttpService } from './services/http.service';
 export class AppComponent implements OnInit {
 
   constructor(
-    private _colorsService: HttpService
+    private _httpService: HttpService
   ) {}
 
   ngOnInit() {
   }
 
   pickRandColor() {
-    const randColorArr = this._httpService.pickRandomColor();
-    sessionStorage.setItem('randColorArr', JSON.stringify(randColorArr));
+    const randomColorArr = this._httpService.pickRandomColor();
+    sessionStorage.setItem('randomColorArr', JSON.stringify(randomColorArr));
   }
+
+  // saveColor(index) {
+  //   this.randomColors = JSON.parse(sessionStorage.getItem('randColorArr'));
+  //   this.pickedColor = this.randomColors[0];
+  // }
 }

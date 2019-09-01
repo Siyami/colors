@@ -1,17 +1,19 @@
 <div class="row">
     <div class="card">
-        <div [style.backgroundColor]="randomColors[0]" class="color"></div>
+        <div [style.backgroundColor]="pickedColor" class="color"></div>
         <div class="container">
-            <p class="color-name">{{randomColors[0]}}</p>
+            <p class="color-name">{{pickedColor}}</p>
         </div>
     </div>
 </div>
 
 <div class="row">
-    <div *ngFor="let color of randomColors" class="card">
-        <div [style.backgroundColor]="color" class="color"></div>
-        <div class="container">
-            <p class="color-name">{{color}}</p>
-        </div>
-    </div>
+  <div *ngFor="let color of randomColors" (click)="switchColor(color)" class="card details">
+      <div [style.backgroundColor]="color" class="color"></div>
+      <div class="container">
+          <p class="color-name">{{color}}</p>
+      </div>
+  </div>
 </div> 
+
+<button [routerLink]="['']" id="go-back-btn">Go Back to Full List</button> 
