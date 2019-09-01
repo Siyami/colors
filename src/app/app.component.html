@@ -15,14 +15,14 @@
           <div class="sidebar-sticky" id="sideview">
               <button (click)="pickRandColor()" [routerLink]="['detail']" class="btn btn-light side-btn">Random Color</button>
               <ul class="nav flex-column">
-                  <li (click)="saveColor(0)">Red</li>
-                  <li>Orange</li>
-                  <li>Yellow</li>
-                  <li>Green</li>
-                  <li>Blue</li>
-                  <li>Purple</li>
-                  <li>Brown</li>
-                  <li>Gray</li>
+                <li (click)="saveColor(0)" [routerLink]="['detail']">Red</li>
+                <li (click)="saveColor(1)" [routerLink]="['detail']">Orange</li>
+                <li (click)="saveColor(2)" [routerLink]="['detail']">Yellow</li>
+                <li (click)="saveColor(3)" [routerLink]="['detail']">Green</li>
+                <li (click)="saveColor(4)" [routerLink]="['detail']">Blue</li>
+                <li (click)="saveColor(5)" [routerLink]="['detail']">Purple</li>
+                <li (click)="saveColor(6)" [routerLink]="['detail']">Brown</li>
+                <li (click)="saveColor(7)" [routerLink]="['detail']">Gray</li>
               </ul>
           </div>
       </nav>

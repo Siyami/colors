@@ -21,8 +21,8 @@ export class AppComponent implements OnInit {
     sessionStorage.setItem('randomColorArr', JSON.stringify(randomColorArr));
   }
 
-  // saveColor(index) {
-  //   this.randomColors = JSON.parse(sessionStorage.getItem('randColorArr'));
-  //   this.pickedColor = this.randomColors[0];
-  // }
+  saveColor(index) {
+    const randColorArr = this._httpService.getRandColorArr()[index];
+    sessionStorage.setItem('randColorArr', JSON.stringify(randColorArr));
+  }
 }

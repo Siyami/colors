@@ -8,11 +8,11 @@ export class HttpService {
   error: any;
   randomColorsArr = [
     [
-      '#DC143C',
-      '#CD5C5C',
-      '#F08080',
-      '#E9967A',
-      '#FA8072'
+      '#dc143c',
+      '#cd5c5c',
+      '#f08080',
+      '#e9967a',
+      '#fa8072'
     ],
     [
       '#ffa500',
@@ -22,11 +22,11 @@ export class HttpService {
       '#ffc966'
     ],
     [
+      '#cccc00',
       '#ffff00',
       '#ffff19',
-      '#ffff32',
-      '#ffff4c',
-      '#ffff66'
+      '#ffff66',
+      '#ffffcc'
     ],
     [
       '#008000',
@@ -36,11 +36,11 @@ export class HttpService {
       '#66b266'
     ],
     [
-      '#0000ff',
-      '#1919ff',
-      '#3232ff',
-      '#4c4cff',
-      '#6666ff',
+      '#1e90ff',
+      '#00bfff',
+      '#87cefa',
+      '#e6e6fa',
+      '#f0f8ff'
     ],
     [
       '#800080',
@@ -78,5 +78,9 @@ export class HttpService {
   pickRandomColor() {
     const randNumber = Math.floor(Math.random() * 8);
     return this.randomColorsArr[randNumber];
+  }
+
+  getRandColorArr() {
+    return this.randomColorsArr;
   }
 }
