@@ -16,4 +16,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
+  pickRandColor() {
+    const randColorArr = this._httpService.pickRandomColor();
+    sessionStorage.setItem('randColorArr', JSON.stringify(randColorArr));
+  }
 }

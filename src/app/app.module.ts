@@ -5,12 +5,14 @@ import {HttpClientModule} from '@angular/common/http';
 import { HttpService } from './services/http.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { ListColorsComponent } from './components/list-colors/list-colors.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListColorsComponent
+    ListColorsComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

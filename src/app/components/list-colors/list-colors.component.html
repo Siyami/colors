@@ -1,12 +1,14 @@
-<div *ngIf="displayArr && displayArr.length > 0">
-  <div *ngFor="let color of displayArr" [style.backgroundColor]="'#' + color.hex" class="card">
-    <!-- <img src="img_avatar2.png" alt="Avatar" style="width:100%"> -->
-    <div class="container">
-        <p>{{'#' + color.hex}}</p>
-    </div>
+<div class="row">
+  <div *ngFor="let color of displayArr" class="card">
+      <!-- <img src="img_avatar2.png" alt="Avatar" style="width:100%"> -->
+      <div [style.backgroundColor]="'#' + color.hex" class="color"></div>
+      <div class="container">
+          <p class="color-name">{{'#' + color.hex}}</p>
+      </div>
   </div>
 </div>
-
-<ol>
-  <li *ngFor="let number of pageArr" id="pagination" (click)="changePage(number)">{{number}}</li>
-</ol> 
+<div class="row">
+  <ol id="page-nums">
+      <li *ngFor="let number of pageArr" id="pagination" (click)="changePage(number)">{{number}}</li>
+  </ol>
+</div>

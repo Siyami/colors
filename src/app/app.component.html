@@ -13,7 +13,7 @@
       <!-- Side Nav -->
       <nav id="sidenav" class="col-md-2 d-none d-md-block sidebar" style="height: calc(100vh - 60px); overflow-y: auto;">
           <div class="sidebar-sticky" id="sideview">
-              <button>Random Color</button>
+              <button (click)="pickRandColor()" [routerLink]="['detail']">Random Color</button>
               <ul class="nav flex-column">
                   <li>Red</li>
                   <li>Orange</li>

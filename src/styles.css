@@ -19,11 +19,14 @@ body {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    width: 250px;
+    width: 200px;
     height: 250px;
     border-radius: 5px;
-    float: left;
     margin: 20px 20px 20px 20px;
+}
+
+.wrapper {
+    display: inline;
 }
 
 .card:hover {
@@ -43,4 +46,18 @@ img {
     margin-right: 10px;
     cursor: pointer;
     font-size: 18px;
+} 
+
+div.color {
+    height: 200px;
+    margin: 1px 1px 0px 1px;
+}
+
+.color-name {
+    margin-bottom: 0px;
+    margin-top: 9px;
+}
+
+#page-nums {
+    margin: 40px 0px 50px 200px;
 } 
