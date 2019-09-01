@@ -26,14 +26,16 @@
               </ul>
           </div>
       </nav>
-      <main *ngIf="colorsData" id="main" role="main" class="ml-sm-auto col-md-10 pt-3 px-4" style="padding-left: 0px; height: calc(100vh - 60px); overflow-y: auto;">
-          <div *ngFor="let color of colorsData.colors" [style.backgroundColor]="'#' + color.hex" class="card">
+      <main *ngIf="displayArr && displayArr.length > 0" id="main" role="main" class="ml-sm-auto col-md-10 pt-3 px-4" style="padding-left: 0px; height: calc(100vh - 60px); overflow-y: auto;">
+          <div *ngFor="let color of displayArr" [style.backgroundColor]="'#' + color.hex" class="card">
               <!-- <img src="img_avatar2.png" alt="Avatar" style="width:100%"> -->
               <div class="container">
-                  <h4><b>Jane Doe</b></h4>
-                  <p>Interior Designer</p>
+                  <p>{{'#' + color.hex}}</p>
               </div>
           </div>
+          <ol>
+            <li *ngFor="let number of pageArr" id="pagination" (click)="changePage(number)">{{number}}</li>
+          </ol>
           <!-- <router-outlet></router-outlet> -->
       </main>
   </div>

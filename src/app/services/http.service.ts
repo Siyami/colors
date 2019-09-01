@@ -4,7 +4,7 @@ import { catchError, retry } from 'rxjs/operators';
 
 @Injectable()
 export class HttpService {
-  apiUrl: string = 'http://www.colr.org/json/colors/random/100';
+  apiUrl: string = 'http://www.colr.org/json/colors/random/300';
   error: any;
 
   constructor(private _http: HttpClient) {}

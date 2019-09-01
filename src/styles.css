@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Source Serif Pro', serif;
+}
 
 #sidenav {
     background-color: lightgray;
@@ -16,8 +19,8 @@
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 5px;
     float: left;
     margin: 20px 20px 20px 20px;
@@ -34,3 +37,10 @@ img {
 .container {
     padding: 2px 16px;
 }
+
+#pagination {
+    display: inline;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+} 
